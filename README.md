@@ -1,9 +1,3 @@
-
-## What technologies are used for this project?
-
-This project is built with .
-
-
 # 💼 Sagar Karmakar — Portfolio Website
 
 This is my personal portfolio website built using **React.js**. It highlights my skills, projects, and experience as a **Full-Stack Developer** and **Android App Developer**. Designed with responsiveness and modern aesthetics in mind, the portfolio gives a complete overview of who I am and what I do.
