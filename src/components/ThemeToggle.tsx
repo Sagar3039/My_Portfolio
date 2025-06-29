@@ -32,10 +32,10 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleDarkMode}
-      className="p-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-foreground hover:bg-white/20 transition-colors hover:scale-110 hover:rotate-12 transition-all duration-300"
+      className="p-2 rounded-full bg-white/10 backdrop-blur-md border  text-red-500 hover:bg-white/20 transition-colors hover:scale-110 hover:rotate-12 transition-all duration-300"
       aria-label="Toggle theme"
     >
-      {darkMode ? <Sun size={20} className="hover:text-yellow-300" /> : <Moon size={20} className="hover:text-blue-400" />}
+      {darkMode ? <Sun size={20} className="hover:text-orange-500" /> : <Moon size={20} className="hover:text-blue-400" />}
     </button>
   );
 };

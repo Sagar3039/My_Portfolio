@@ -60,8 +60,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className="font-bold text-xl md:text-2xl gradient-text hover:scale-105 transition-transform">
-              SK<span className="text-foreground">.</span>
+            <Link to="/" className="font-bold text-xl md:text-2xl text-red-500 hover:scale-105 ">
+              SK
             </Link>
           </div>
           
