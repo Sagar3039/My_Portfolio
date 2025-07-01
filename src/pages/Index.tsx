@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import SkillsSection from "../components/SkillsSection";
@@ -8,11 +8,12 @@ import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 
 const Index = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      <Navbar show={showNavbar} />
       <main>
-        <HeroSection />
+        <HeroSection setShowNavbar={setShowNavbar} />
         <SkillsSection />
         <ProjectsSection />
         <AboutSection />

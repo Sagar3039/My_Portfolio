@@ -1,10 +1,31 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const directions = ["left", "right", "up", "down"];
+
+function animatedNavLabel(label: string, baseKey: string, show: boolean) {
+  return label.split("").map((char, i) => {
+    if (char === " ") return <span key={baseKey + "-space-" + i} style={{ display: "inline-block", width: "0.5em" }} />;
+    const dir = directions[i % directions.length];
+    return (
+      <span
+        key={baseKey + "-" + i}
+        className={
+          show
+            ? `inline-block opacity-0 smooth-slide-in-${dir} letter-delay-${i}`
+            : "inline-block opacity-0"
+        }
+        style={{ animationFillMode: "forwards" }}
+      >
+        {char}
+      </span>
+    );
+  });
+}
+
+const Navbar = ({ show }: { show: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -49,11 +70,13 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
+  if (!show) return null;
+
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 fade-in-down ${
         scrolled
-          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md"
+          ? "bg-white/20 dark:bg-black/20 backdrop-blur-md shadow-md"
           : "bg-transparent"
       }`}
     >
@@ -66,14 +89,15 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item, idx) => (
               <a
                 key={item.name}
                 href={`#${item.href}`}
                 onClick={(e) => handleClick(e, item.href)}
-                className="nav-link-hover font-medium"
+                className={`nav-link-hover font-medium`}
+                style={{ animationFillMode: "forwards" }}
               >
-                {item.name}
+                {animatedNavLabel(item.name, item.name, show)}
               </a>
             ))}
             <ThemeToggle />

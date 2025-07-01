@@ -76,9 +76,9 @@ const SkillsSection = () => {
   )?.skills;
 
   return (
-    <section id="skills" className="py-20 pattern-bg">
+    <section id="skills" className="py-20 ">
       <div className="container mx-auto px-6">
-        <h2 className="section-title text-center mx-auto hover:text-primary transition-colors duration-300">My Skills</h2>
+        <h2 className="section-title text-center mx-auto  text-black dark:text-white  transition-colors duration-300">My Skills</h2>
         <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300">
           I've developed expertise across various technologies and platforms, with a focus on creating efficient and elegant solutions.
         </p>

@@ -1,4 +1,3 @@
-
 import { ArrowUp, Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const Footer = () => {
@@ -12,14 +11,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-background text-foreground">
       <div className="container mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#home" className="text-2xl font-bold gradient-text hover:scale-105 transition-transform">
-              SK<span className="text-white">.</span>
+              SK<span className="text-foreground">.</span>
             </a>
-            <p className="mt-2 text-gray-400 max-w-xs hover:text-gray-300 transition-colors">
+            <p className="mt-2 text-foreground max-w-xs hover:text-primary transition-colors">
               Delivering elegant solutions through code, one project at a time.
             </p>
           </div>
@@ -30,7 +29,7 @@ const Footer = () => {
                 href="https://github.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full border border-gray-700 hover:border-primary transition-colors hover:text-primary hover:rotate-6 hover:scale-110 transition-all social-icon-hover"
+                className="p-2 rounded-full border border-border hover:border-primary transition-colors hover:text-primary hover:rotate-6 hover:scale-110 transition-all social-icon-hover"
                 aria-label="Github"
               >
                 <Github size={18} />
@@ -39,7 +38,7 @@ const Footer = () => {
                 href="https://linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full border border-gray-700 social-icon-hover"
+                className="p-2 rounded-full border border-border social-icon-hover"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
@@ -48,14 +47,14 @@ const Footer = () => {
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full border border-gray-700 social-icon-hover"
+                className="p-2 rounded-full border border-border social-icon-hover"
                 aria-label="Twitter"
               >
                 <Twitter size={18} />
               </a>
               <a
                 href="mailto:contact@sagarkarmakar.dev"
-                className="p-2 rounded-full border border-gray-700 social-icon-hover"
+                className="p-2 rounded-full border border-border social-icon-hover"
                 aria-label="Email"
               >
                 <Mail size={18} />
@@ -72,9 +71,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div>
-            <p className="text-gray-500 text-sm">
+            <p className="text-foreground text-sm">
               © {currentYear} Sagar Karmakar. All rights reserved.
             </p>
           </div>
@@ -84,7 +83,7 @@ const Footer = () => {
                 <a 
                   key={item} 
                   href={`#${item.toLowerCase()}`} 
-                  className="link-underline text-gray-400"
+                  className="link-underline text-foreground"
                 >
                   {item}
                 </a>
